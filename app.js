@@ -143,7 +143,7 @@ function fetchWeatherData() {
             code == 522 ||
             code == 531
         ) {
-            app.style.backgroundImage = `url(./Images/rainy.jpg)`;
+            app.style.backgroundImage = `url(./Rainy.jpg)`;
             btn.style.background = "#647d75";
             icon.src = "./icons/308.png";
         }
