@@ -22,12 +22,12 @@ cities.forEach((city) => {
         app.style.opacity = "0";
     });
 });
-
 form.addEventListener("submit", (e) => {
     if(search.value.length == 0) {
         alert("Please type in a city Name");
     }
     else{
+    
         cityInput = search.value;
 
         fetchWeatherData();
@@ -53,9 +53,6 @@ function fetchWeatherData() {
         conditionOuput.innerHTML = data.weather[0].description;
 
         nameOutput.innerHTML = data.name;
-        // const iconId = data.weather[0].icon;
-
-        // icon.src = "http://openweathermap.org/img/wn/" + iconId + "@2x.png";
         
 
         cloudOuput.innerHTML = data.clouds.all + "%";
@@ -146,7 +143,7 @@ function fetchWeatherData() {
             code == 522 ||
             code == 531
         ) {
-            app.style.backgroundImage = `url(.Images/rainy.jpg)`;
+            app.style.backgroundImage = `url(./Images/rainy.jpg)`;
             btn.style.background = "#647d75";
             icon.src = "./icons/308.png";
         }
